@@ -1,5 +1,5 @@
 import React from 'react'
-import {useStyle} from './utils'
+import {useStyle} from './hooks'
 
 const BVHPresentional = ({w, h, scale, i, onClick}) => {
     const {getBlockStyle} = useStyle(w, h, scale)
