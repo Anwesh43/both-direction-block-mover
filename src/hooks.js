@@ -50,8 +50,8 @@ export const useDimension = () => {
 
 export const useStyle = (w, h, scale) => {
     const size = Math.min(w, h) / 8
-    const fixedX = h / 2 - size / 2
-    const fixedY = w / 2 - size / 2
+    const fixedX = w / 2 - size / 2
+    const fixedY = h / 2 - size / 2
     const position = 'absolute'
     const sf = sinify(scale)
     const width = `${size}px`
@@ -62,6 +62,7 @@ export const useStyle = (w, h, scale) => {
             const si = 1 - 2 * i
             const x = fixedX * (1 + si * divideScale(sf, 1, 2))
             const y = fixedY * (1 + si * divideScale(sf, 0, 2))
+            console.log("fixedX", fixedX, "si", si, "sf", sf, "w", w, "h", h, "fixedY", fixedY)
             const left = `${x}px`
             const top = `${y}px`
             return {position, background, width, height, left, top}

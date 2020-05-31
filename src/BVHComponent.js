@@ -3,7 +3,7 @@ import React from 'react'
 import BVHPresentional from './BVHPresentional'
 
 const BVHComponent = (props) => {
-    const {scale, i, start} = useAnimatedScale(0.02, 20)
+    const {scale, i, start} = useAnimatedScale(0.01, 40)
     const {w, h} = useDimension()
     return <BVHPresentional w = {w} h = {h} scale = {scale} i = {i} onClick = {start}>
     </BVHPresentional>
